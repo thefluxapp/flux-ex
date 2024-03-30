@@ -1,5 +1,5 @@
-fn main() {
-    println!("CCC");
+mod app;
 
-    println!("Hello, world!");
+fn main() {
+    app::main();
 }
