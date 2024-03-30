@@ -1,5 +1,6 @@
 use super::repo;
 
+#[mry::mry]
 pub fn join(twice: bool) -> i32 {
     let mut result = repo::join(5);
 

@@ -1,6 +1,9 @@
+use axum::{routing::get, Router};
+
+mod controller;
 mod repo;
 mod service;
 
-pub fn main() -> i32 {
-    service::join(true)
+pub fn router() -> Router {
+    Router::new().route("/", get(controller::join))
 }

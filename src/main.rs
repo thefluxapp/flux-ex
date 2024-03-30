@@ -1,5 +1,6 @@
 mod app;
 
-fn main() {
-    app::main();
+#[tokio::main]
+async fn main() {
+    app::main().await;
 }
