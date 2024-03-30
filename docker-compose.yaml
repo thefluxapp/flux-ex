@@ -1,0 +1,18 @@
+services:
+  app: &app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: "cargo watch -x run"
+    ports:
+      - 20500:3000
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/app
+      - cargo-home:/usr/local/cargo
+      - rustup-home:/usr/local/rustup
+
+volumes:
+  cargo-home:
+  rustup-home:
