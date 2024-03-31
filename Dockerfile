@@ -1,3 +1,3 @@
 FROM rust:1
 
-RUN rustup component add rustfmt
+RUN rustup component add rustfmt rust-analyzer
